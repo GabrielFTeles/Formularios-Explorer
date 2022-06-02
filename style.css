@@ -97,6 +97,8 @@ main {
   background-color: var(--primary-color);
 }
 
+
+
 .buttons a:nth-of-type(1) {
   animation: 0.5s slide-rigth 0.8s ease forwards;
 }
@@ -120,6 +122,8 @@ main {
     opacity: 1;
   }
 }
+
+
 
 .container h1 {
   animation: 2s appear 0.5s forwards;
