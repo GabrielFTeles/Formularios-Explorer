@@ -1,0 +1,279 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+:root {
+  --page-bg-color: hsl(0, 0%, 94%);
+  --primary-color: hsl(228, 15%, 38%);
+
+  --border-color: hsl(240, 24%, 92%);
+
+  --input-bg-color: hsl(240, 25%, 98%);
+  --button-bg-color: hsl(348, 100%, 66%);
+  --button-bg-hover-color: hsl(348, 100%, 56%);
+
+  --label-color: hsl(258, 9%, 32%);
+  --label-span-color: hsl(258, 14%, 77%);
+  --label-span-hover-color: hsl(252, 5%, 37%);
+
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--page-bg-color);
+
+  font-family: 'Staatliches', cursive;
+
+  font-size: 1.6rem;
+}
+
+body::before {
+  content: '';
+  display: block;
+
+  position: absolute;
+  top: 0; 
+  left: 0;
+  z-index: -10;
+
+  height: 43.6rem;
+  width: 100%;
+
+  background-color: var(--primary-color);
+}
+
+main {
+  padding-bottom: 20rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.container {
+  width: min(77rem, 100%);
+
+  padding-inline: 2rem;
+
+  margin-inline: auto;
+}
+
+p,
+label,
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  display: block;
+}
+
+.form-content form legend,
+h3 {
+  color: var(--primary-color);
+}
+
+h1,
+h3 {
+  font-weight: 400;
+}
+
+
+
+/*==== HEADER ===========================*/
+
+header {
+  padding-block: 14rem 5rem;
+}
+
+.header-content {
+  color: white;
+
+  width: min(41.5rem, 100%);
+}
+
+.header-content h1 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+  letter-spacing: 2px;
+
+  margin-bottom: 1.8rem;
+}
+
+.header-content p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+
+
+/*==== FORM SECTION ===========================*/
+
+.form-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  background-color: white;
+
+  padding: 6.4rem;
+
+  border-radius: 2rem 2rem 0 0;
+}
+
+.form-content form legend {
+  font-size: 24px;
+  line-height: 34px;
+
+  width: 100%;
+
+  padding-bottom: 1.6rem;
+
+  border-bottom: 1px solid var(--border-color);
+
+  margin-bottom: 3.6rem;
+}
+
+.form-content fieldset h3 {
+  font-size: 2rem;
+  line-height: 3.4rem;
+
+  margin-bottom: 1.1rem;
+}
+
+.input-section {
+  width: 100%;
+}
+
+.input-section label {
+  color: var(--label-color);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.input-section label span {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--label-span-color);
+
+  transition: 0.2s;
+}
+
+.input-section label:hover span {
+  color: var(--label-span-hover-color);
+}
+
+.input-section input {
+  width: 100%;
+  height: 5.6rem;
+  
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+
+  background-color: var(--input-bg-color);
+
+  padding-inline: 2.4rem;
+}
+
+.input-section input:valid {
+  border: 1px solid hsl(120, 100%, 51%);
+  background-color: white;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fullname-input-section {
+  display: flex;
+  gap: 2rem;
+}
+
+#mentorship-date {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mentorship-container,
+.mentorship-hour {
+  display: flex;
+}
+
+.mentorship-container {
+  gap: 3.2rem;
+}
+
+.mentorship-hour {
+  gap: 1rem;
+}
+
+
+/*==== FORM FOOTER =====*/
+
+
+.form-content footer {
+  background-color: var(--primary-color);
+
+  padding: 5.2rem 7.1rem;
+
+  border-radius: 0 0 2rem 2rem;
+}
+
+.form-content footer input {
+  width: 100%;
+  height: 5.6rem;
+
+  font-family: 'Staatliches', cursive;
+  color: white;
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 2rem;
+
+  background-color: var(--button-bg-color);
+
+  transition: 0.2s;
+}
+
+.form-content footer input:hover {
+  background-color: var(--button-bg-hover-color);
+}
+
+
+
+/*==== RESPONSIVE ===========================*/
+
+@media (max-width: 675px) {
+  .mentorship-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .fullname-input-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 465px) {
+  .form-content form {
+    padding: 4rem;
+  }
+
+  .mentorship-hour {
+    flex-direction: column;
+  }
+
+  .form-content footer {
+    padding: 4.2rem 4rem;
+  }
+}
+
+
