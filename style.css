@@ -1,0 +1,136 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+  --body-bg-color: hsl(240, 17%, 12%);
+
+  --primary-color: hsl(47, 87%, 66%);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--body-bg-color);
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+
+  width: fit-content;
+
+  text-align: center;
+
+  padding-inline: 2rem;
+}
+
+.container h1 {
+  opacity: 0;
+  
+  color: var(--primary-color);
+
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.buttons a {
+  text-decoration: none;
+
+  opacity: 0;
+
+  color: var(--primary-color);
+  font-weight: 700;
+
+  padding: 0.6rem;
+
+  width: 100%;
+
+  border: 3px solid var(--primary-color);
+  border-radius: 5px;
+
+  position: relative;
+
+  transition: 0.5s;
+}
+
+.buttons a:hover {
+  color: var(--body-bg-color);
+}
+
+.buttons a::before {
+  content: '';
+  display: block;
+  
+  position: absolute;
+  left: 0; top: 0;
+  z-index: -1;
+  
+  background-color: var(--primary-color);
+  
+  height: 100%;
+  max-width: 0;
+  width: 0;
+  
+  transition: 0.5s;
+}
+
+.buttons a:hover:before {
+  max-width: 100%;
+  width: 100%;
+}
+
+.buttons a:focus {
+  color: var(--body-bg-color);
+  background-color: var(--primary-color);
+}
+
+.buttons a:nth-of-type(1) {
+  animation: 0.5s slide-rigth 0.8s ease forwards;
+}
+
+.buttons a:nth-of-type(2) {
+  animation: 0.5s slide-rigth 1.2s ease forwards;
+}
+
+.buttons a:nth-of-type(3) {
+  animation: 0.5s slide-rigth 1.6s ease forwards;
+}
+
+@keyframes slide-rigth {
+  0% {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container h1 {
+  animation: 2s appear 0.5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
