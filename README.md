@@ -1,6 +1,6 @@
 # Explorer, Stage 03.
 
-This all the forms made on Stage 03 Explorer from [RocketSeat](rocketseat.com.br/).
+All forms made on Stage 03 Explorer from [RocketSeat](rocketseat.com.br/).
 
 ## Table of contents
 
