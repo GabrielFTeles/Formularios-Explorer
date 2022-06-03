@@ -138,3 +138,11 @@ main {
     opacity: 1;
   }
 }
+
+
+
+@media (max-width: 600px) {
+  main {
+    height: 80vh;
+  }
+}
